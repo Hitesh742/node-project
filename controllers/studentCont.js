@@ -55,7 +55,7 @@ class StudendCont {
     static deleteDocById = async(req, res) => {
         try {
             const result = await StudentModel.findByIdAndRemove(req.params.id)
-            //console.log(result);
+            //console.log(result); check
             res.redirect('/')
         } catch (error) {
             console.log(error)
