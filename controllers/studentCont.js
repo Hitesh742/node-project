@@ -45,7 +45,6 @@ class StudendCont {
     static updateDocById = async(req, res) => {
         try {
             const result = await StudentModel.findByIdAndUpdate(req.params.id,req.body)
-            //console.log(result);
             res.redirect("/")
         } catch (error) {
             console.log(error)
